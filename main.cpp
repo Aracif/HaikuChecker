@@ -12,11 +12,11 @@ int main()
     init_apartment();
     
     string filename = "";
-    vector<string> poemLines;
     ifstream myfile;
     Poem poem;
     //main loop
     while (filename != "q") {
+        vector<string> poemLines;
         cout << "Enter a path to the poem text file you would like to read or q to quit ";
         cin >> filename;
         cout << "\n";
@@ -35,6 +35,7 @@ int main()
             cout << "\n";
             poem.isHaiku();
             cout << "\n";
+            myfile.close();
             //cout << poem.getPoemLines()[1].c_str();
         }
         else {

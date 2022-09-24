@@ -114,7 +114,11 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="PropertySheet.props" />
+    <Text Include="alas.txt" />
+    <Text Include="dew.txt" />
     <Text Include="frogs.txt" />
+    <Text Include="moonlight.txt" />
+    <Text Include="rain.txt" />
     <Text Include="readme.txt">
       <DeploymentContent>false</DeploymentContent>
     </Text>

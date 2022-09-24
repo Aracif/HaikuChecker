@@ -94,27 +94,27 @@ int Poem::findSyllablesInWord(string word) {
 
 void Poem::printResultsReport(vector<int> syllablesInEachLine) {
     int failures = 0;
-    if (!syllablesInEachLine.size()==3) {
+    if (syllablesInEachLine.size()!=3) {
         failures++;
         printf("haikus are 3 lines, this poem is %i lines.", syllablesInEachLine.size());
     }
-    if (!syllablesInEachLine[0]==5) {
+    if (syllablesInEachLine[0] != 5) {
         failures++;
-        printf("Traditionally, the first line of a haiku is 5 syllables. This poem is %i syllables.", syllablesInEachLine[0]);
+        printf("Traditionally, the first line of a haiku is 5 syllables. This poem is %i syllables.\n", syllablesInEachLine[0]);
     }    
-    if (!syllablesInEachLine[1]==7) {
+    if (syllablesInEachLine[1]!=7) {
         failures++;
-        printf("Traditionally, the second line of a haiku is 7 syllables. This poem is %i syllables.", syllablesInEachLine[1]);
+        printf("Traditionally, the second line of a haiku is 7 syllables. This poem is %i syllables.\n", syllablesInEachLine[1]);
     }    
-    if (!syllablesInEachLine[2]==5) {
+    if (syllablesInEachLine[2] != 5) {
         failures++;
-        printf("Traditionally, the third line of a haiku is 5 syllables. This poem is %i syllables.", syllablesInEachLine[2]);
+        printf("Traditionally, the third line of a haiku is 5 syllables. This poem is %i syllables.\n", syllablesInEachLine[2]);
     }
     if (failures==0) {
-        cout << "Valid haiku";
+        cout << "Valid haiku\n";
     }
     else {
-        printf("\t%i total errors", failures);
+        printf("\t%i total errors\n", failures);
     }
 }
 

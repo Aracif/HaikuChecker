@@ -22,7 +22,7 @@ class Poem
 		//mutators
 		//Empty
 
-		//Business Logic
+		//business logic
 		bool isHaiku();
 		bool isVowel(char c);
 		vector<int> findSyllablesInLine();

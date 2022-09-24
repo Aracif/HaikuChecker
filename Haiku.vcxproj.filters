@@ -42,5 +42,17 @@
     <Text Include="frogs.txt">
       <Filter>Source Files</Filter>
     </Text>
+    <Text Include="alas.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="dew.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="moonlight.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="rain.txt">
+      <Filter>Source Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

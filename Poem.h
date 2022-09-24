@@ -2,6 +2,9 @@
 #include <string>
 #include <iostream>
 #include <vector>
+#include <iterator>
+#include <sstream>
+
 using namespace std;
 
 class Poem
@@ -17,8 +20,17 @@ class Poem
 		vector<string> getPoemLines();
 
 		//mutators
-
+		
 		bool isHaiku();
+		bool isVowel(char c);
+		int findSyllablesInLine();
+		int findSyllablesInWord(string word);
+
+		template <typename Out>
+
+		void split(const string& s, char delim, Out result);
+
+		vector<string> split(const string& s, char delim);
 };
 
 

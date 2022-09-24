@@ -31,7 +31,10 @@ int main()
                 poemLines.push_back(line);
                 cout << line + "\n";
             }
-            poem = Poem{ poemLines };
+            poem = Poem( poemLines );
+            cout << "\n";
+            poem.isHaiku();
+            //cout << poem.getPoemLines()[1].c_str();
         }
         else {
             printf("Unable to open %s try a path to an existing .txt file.\n", filename.c_str());

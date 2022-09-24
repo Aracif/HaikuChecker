@@ -34,6 +34,7 @@ int main()
             poem = Poem( poemLines );
             cout << "\n";
             poem.isHaiku();
+            cout << "\n";
             //cout << poem.getPoemLines()[1].c_str();
         }
         else {

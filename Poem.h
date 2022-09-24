@@ -20,16 +20,16 @@ class Poem
 		vector<string> getPoemLines();
 
 		//mutators
-		
+		//Empty
+
+		//Business Logic
 		bool isHaiku();
 		bool isVowel(char c);
-		int findSyllablesInLine();
+		vector<int> findSyllablesInLine();
 		int findSyllablesInWord(string word);
-
+		void printResultsReport(vector<int> syllablesInEachLine);
 		template <typename Out>
-
 		void split(const string& s, char delim, Out result);
-
 		vector<string> split(const string& s, char delim);
 };
 

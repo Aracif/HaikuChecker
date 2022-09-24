@@ -18,7 +18,8 @@ Poem::Poem(vector<string> newPoemLines) {
 }
 
 bool Poem::isHaiku() {
-    findSyllablesInLine();
+    vector<int> syllablesInEachLine = findSyllablesInLine();
+    printResultsReport(syllablesInEachLine);
 	return true;
 }
 
@@ -40,7 +41,7 @@ bool Poem::isVowel(char c) {
     }
 }
 
-int Poem::findSyllablesInLine() {
+vector<int> Poem::findSyllablesInLine() {
     vector<int> syllablesInEachLine;
     
     for (int i = 0; i < poemLines.size(); i++) {
@@ -51,7 +52,7 @@ int Poem::findSyllablesInLine() {
         }
         syllablesInEachLine.push_back(totalSyllablesInLine);
     }
-    return 777;
+    return syllablesInEachLine;
 }
 
 //Core logic for determining syllable count
@@ -89,6 +90,32 @@ int Poem::findSyllablesInWord(string word) {
     }
     printf("[SYLL_COUNT] %s has %i syllables\n", word.c_str(), syllables);
     return syllables;
+}
+
+void Poem::printResultsReport(vector<int> syllablesInEachLine) {
+    int failures = 0;
+    if (!syllablesInEachLine.size()==3) {
+        failures++;
+        printf("haikus are 3 lines, this poem is %i lines.", syllablesInEachLine.size());
+    }
+    if (!syllablesInEachLine[0]==5) {
+        failures++;
+        printf("Traditionally, the first line of a haiku is 5 syllables. This poem is %i syllables.", syllablesInEachLine[0]);
+    }    
+    if (!syllablesInEachLine[1]==7) {
+        failures++;
+        printf("Traditionally, the second line of a haiku is 7 syllables. This poem is %i syllables.", syllablesInEachLine[1]);
+    }    
+    if (!syllablesInEachLine[2]==5) {
+        failures++;
+        printf("Traditionally, the third line of a haiku is 5 syllables. This poem is %i syllables.", syllablesInEachLine[2]);
+    }
+    if (failures==0) {
+        cout << "Valid haiku";
+    }
+    else {
+        printf("\t%i total errors", failures);
+    }
 }
 
 template <typename Out>
